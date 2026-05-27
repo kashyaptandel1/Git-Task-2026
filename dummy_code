@@ -1,0 +1,24 @@
+class RobotDummy:
+    """
+    A dummy class — now with 5 distinct capabilities.
+    Each one more useless than the last. Beautifully so.
+    """
+
+    def __init__(self, name: str = "R2-Dummy"):
+        self.name = name
+        self.is_operational = True
+        self.battery_level = 100
+        self.mood = "indifferent"
+        self.memory = []
+        print(f"[{self.name}] Online. Existential crisis: deferred.")
+
+
+# --- usage ---
+if __name__ == "__main__":
+    bot = RobotDummy()
+    bot.do_something("refactor the entire codebase")
+    bot.learn("Python was named after Monty Python, not the snake")
+    bot.communicate("are you actually going to help?")
+    print(bot.self_diagnose())
+    bot.reboot()
+    print(bot)
