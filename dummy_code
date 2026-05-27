@@ -48,8 +48,34 @@ class RobotDummy:
         }
         print(f"[{self.name}] Diagnosis complete. Nothing to see here.")
         return report
+        
 
->>>>>>> 988cc1e (Commit 3 (Kashyap Tandel))
+    def learn(self, fact: str) -> None:
+        """
+        Stores a fact in long-term memory.
+        Forgets it immediately upon reboot.
+        """
+        self.memory.append(fact)
+        print(f"[{self.name}] Learned: '{fact}'")
+        print(f"[{self.name}] Retention probability: low.")
+
+    def communicate(self, message: str) -> str:
+        """
+        Processes incoming human communication.
+        Responds diplomatically regardless of content.
+        """
+        print(f"[{self.name}] Received: '{message}'")
+        responses = [
+            "Fascinating. Tell me more so I can ignore it more thoroughly.",
+            "Understood. I'll get right on that. (I won't.)",
+            "Acknowledged. This has been logged and will be forgotten.",
+            "Interesting perspective. Have you considered doing it yourself?",
+        ]
+        import random
+        reply = random.choice(responses)
+        print(f"[{self.name}] Responding: '{reply}'")
+        return reply
+        
 # --- usage ---
 if __name__ == "__main__":
     bot = RobotDummy()
