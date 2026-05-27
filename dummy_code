@@ -13,6 +13,43 @@ class RobotDummy:
         print(f"[{self.name}] Online. Existential crisis: deferred.")
 
 
+<<<<<<< HEAD
+=======
+    def do_something(self, task: str) -> str:
+        """
+        Accepts a task with great enthusiasm.
+        Completes it with great imagination.
+        """
+        print(f"[{self.name}] Task received: '{task}'")
+        print(f"[{self.name}] Deploying advanced algorithms", end="")
+        import time
+        for _ in range(3):
+            print(".", end="", flush=True)
+            time.sleep(0.4)
+        print()
+        self.memory.append(f"Almost did: {task}")
+        return "TODO: insert actual implementation here"
+
+    def self_diagnose(self) -> dict:
+        """
+        Runs a full systems diagnostic.
+        Finds no issues because it checks nothing.
+        """
+        print(f"[{self.name}] Running diagnostics...")
+        report = {
+            "unit"              : self.name,
+            "status"            : "technically functional",
+            "battery"           : f"{self.battery_level}%",
+            "mood"              : self.mood,
+            "bugs_found"        : 0,       # did not look
+            "bugs_fixed"        : 0,       # see above
+            "coffee_required"   : True,    # always
+            "sentience"         : "pending review",
+        }
+        print(f"[{self.name}] Diagnosis complete. Nothing to see here.")
+        return report
+
+>>>>>>> 988cc1e (Commit 3 (Kashyap Tandel))
 # --- usage ---
 if __name__ == "__main__":
     bot = RobotDummy()
